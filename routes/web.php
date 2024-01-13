@@ -157,3 +157,7 @@ Route::post('post-file-upload', function(Request $request){
     return asset("storage/{$upload}");
 });
 
+// Commit Git
+Route::get('gitHub', function(){
+    return "Ini Route for Commit GitHub";
+});

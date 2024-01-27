@@ -7,12 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
-  <footer class="bg-dark text-white">
+  <footer class="bg-dark text-white fixed-bottom">
   <div class="container">
     <div class="row">
       <div class="col">
-        <p>Company name</p>
-        <p>Here you can use rows and columns to organize your footer content.</p>
+        <p>ERTS</p>
+        <p>Informative and Akuntable</p>
       </div>
       <div class="col">
         <!-- <p>Products</p>
@@ -34,10 +34,8 @@
       </div>
       <div class="col">
         <p>Contact</p>
-        <p>New York, NY 10012, US</p>
-        <p>info@example.com</p>
-        <p>+ 01 234 567 88</p>
-        <p>+ 01 234 567 89</p>
+        <p>Puorto Rico, PWT 00, IDN</p>
+        <p>erts@mail.info</p>
       </div>
     </div>
   </div>

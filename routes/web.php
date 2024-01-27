@@ -120,14 +120,43 @@ Route::get('/hallo/{name}', function($name){
 
 
 // Language
-Route::get('/Localization/{bahasa}', function($bahasa){
+Route::get('/Local/{bahasa}', function($bahasa){
     App::setLocale($bahasa);
     return __('welcome');
 });
 
 
 // Tamplatting
-Route::view('blog', 'components/frontend');
+Route::get('blog/{lang?}', function($lang = 'en'){
+    App::setLocale($lang, request()->segment(2));
+    return view('components/frontend');
+});
+Route::get('blog/articel/{lang?}', function($lang = 'en'){
+    App::setLocale(request()->segment(3));
+    return view('components/articel');
+})->name('articel');
+
+// Route::get('blog/{lang?}', function($lang = 'en'){
+//     App::setLocale($lang);
+//     return view('components/frontend');
+// });
+// Route::get('blog/articel/{lang?}', function($lang = 'en'){
+//     App::setLocale($lang);
+//     return view('components/articel');
+// });
+// Route::get('blog/{lang}', [UserController::class, 'show']);
+// Route::view('blog', 'components/frontend');
+// Route::group(['prefix' => 'blog/{lang}'], function () {
+//     Route::get('/', function ($lang) {
+//         App::setLocale($lang);
+//         return view('components/frontend');
+//     });
+//     Route::get('/articel', function ($lang) {
+//         App::setLocale($lang);
+//         return view('components/articel');
+//     });
+// });
+
 
 
 // Hashing

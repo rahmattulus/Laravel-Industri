@@ -200,9 +200,7 @@ Route::get('service', function(UserService $userServ){
 Route::view('addfilm', 'cinema');
 Route::post('post-datafilm', [CinemaController::class, 'store']);
 
-
-
-// Commit Git
-Route::get('gitHub', function(){
-    return "Ini Route for Commit GitHub";
+// Tugas 11
+Route::get('github',function(){
+    return "Route GitHub";
 });

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <todo>
+        <Aktivitas>Belajar</Aktivitas>
+        <Tanggal>Januari 2022</Tanggal>
+        <Siswa>Khoirun</Siswa>
+    </todo>
+    <todo>
+        <Aktivitas>Coding</Aktivitas>
+        <Tanggal>Januari 2022</Tanggal>
+        <Siswa>Nisa</Siswa>
+    </todo>
+</root>

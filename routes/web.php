@@ -1,12 +1,15 @@
 <?php
 
 use App\Helpers\Regist;
+use App\Http\Controllers\CinemaController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\UserController;
+use App\Repository\UserRepository;
+use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -158,7 +161,6 @@ Route::get('blog/articel/{lang?}', function($lang = 'en'){
 // });
 
 
-
 // Hashing
 Route::get('hash', function(){
 
@@ -173,7 +175,6 @@ Route::get('hash', function(){
 
 // Encryptsion
 // Route::get('encrypt',function(){
-
 // });
 
 
@@ -185,6 +186,21 @@ Route::post('post-file-upload', function(Request $request){
     $upload = Storage::put('image',$request->profile);
     return asset("storage/{$upload}");
 });
+
+// Repository & service patern
+Route::get("repository", function(UserRepository $userRepo){
+    return $userRepo->FechAll();
+});
+
+Route::get('service', function(UserService $userServ){
+    return $userServ->FechAll();
+});
+
+// Tugas 10
+Route::view('addfilm', 'cinema');
+Route::post('post-datafilm', [CinemaController::class, 'store']);
+
+
 
 // Commit Git
 Route::get('gitHub', function(){
